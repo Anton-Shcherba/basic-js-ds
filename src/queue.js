@@ -36,9 +36,12 @@ class Queue {
   }
 
   dequeue() {
-     let value = this.head.value;
-     this.head = this.head.next;
-     return value;
+    if(this.head){
+      let value = this.head.value;
+      this.head = this.head.next;
+      return value;
+    }
+    return this.head
   }
 }
 
